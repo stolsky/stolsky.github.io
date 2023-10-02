@@ -3,22 +3,22 @@ interface Zone {
     class: string,
 }
 
-const ZoneCollection: { [key: string]: Zone } = {
-    TopLeft: {
+const ZoneCollection = {
+    Top: {
         index: 0,
-        class: "TopLeft",
+        class: "Top",
     },
-    TopRight: {
+    Right: {
         index: 1,
-        class: "TopRight"
+        class: "Right"
     },
-    BottomRight: {
+    Bottom: {
         index: 2,
-        class: "BottomRight"
+        class: "Bottom"
     },
-    BottomLeft: {
+    Left: {
         index: 3,
-        class: "BottomLeft"
+        class: "Left"
     }
 } as const
 // type Zones = (typeof ZoneCollection)[keyof typeof ZoneCollection]
@@ -42,7 +42,7 @@ const structure: readonly StructureItem[] = [
             light: "#fdffb6",
             dark: "#767848"
         },
-        zone: ZoneCollection.TopLeft
+        zone: ZoneCollection.Top
     },
 
     {
@@ -52,7 +52,7 @@ const structure: readonly StructureItem[] = [
             light: "#caffbf",
             dark: "#567a4f"
         },
-        zone: ZoneCollection.TopRight
+        zone: ZoneCollection.Right
     },
     
     {
@@ -62,7 +62,7 @@ const structure: readonly StructureItem[] = [
             light: "#9bf6ff",
             dark: "#3d757b"
         },
-        zone: ZoneCollection.BottomRight
+        zone: ZoneCollection.Bottom
     },
 
     {
@@ -72,7 +72,7 @@ const structure: readonly StructureItem[] = [
             light: "#FFADAD",
             dark: "#824e4f"
         },
-        zone: ZoneCollection.BottomLeft
+        zone: ZoneCollection.Left
     }
     
  ] as const

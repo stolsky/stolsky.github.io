@@ -18,17 +18,18 @@ export default component$<PageProps>((props) => {
         <p
             class={`Title ${props.zone.class}${is_active ? " Active" : ""}`}
             style={`color:${props.color.light};`}
-        >
-            {props.label}
-        </p>
-        <div
-            class={`Page ${props.zone.class}${is_active ? " Active" : ""}`}
-            style={`color:${props.color.dark}; background-color:${props.color.light}`}
             onPointerUp$={() => {
                 const activation = [false, false, false, false]
                 activation[props.zone.index] = true
                 context.value = activation
             }}
+        >
+            <span class="Icon icon-ctrl" />
+            <span class="Label">{props.label}</span>
+        </p>
+        <div
+            class={`Page ${props.zone.class}${is_active ? " Active" : ""}`}
+            style={`color:${props.color.dark}; background-color:${props.color.light}`}
         >
             <Slot />
         </div>
