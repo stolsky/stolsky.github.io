@@ -16,5 +16,6 @@ jobs:
       - name: Build and Upload project
         uses: withastro/action@v1
         with:
-          name: dist
-          path: dist/
+          path: .
+          node-version: 18
+          package-manager: npm@latest
