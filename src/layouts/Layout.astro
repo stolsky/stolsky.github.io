@@ -12,7 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -22,5 +22,26 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+	@import url("/icomoon/style.css");
 
+	@font-face {
+		font-family: "AnekLatin";
+		src:
+		url("/AnekLatin-Bold.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "Aileron";
+		src:
+		url("/Aileron-Regular.otf") format("opentype");
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		font-family: Aileron, sans-serif;
+		overflow: hidden;
+
+		--main-background-color: hsl(198, 100%, 9%);
+	}
 </style>

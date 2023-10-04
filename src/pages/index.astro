@@ -1,15 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import structure from "../components/content/structure"
+import Content from "../components/content/Content";
+
+const structure_items = Object.values(structure)
 ---
 
 <Layout title="Stolsky - Portfolio">
-  <main>
-
-  </main>
+  <Content items={structure_items} client:load />
 </Layout>
 
 <style>
-  main {
-    
-  }
-</style>
+</style>../components/content/structure

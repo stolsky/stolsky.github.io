@@ -4,11 +4,13 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "astro dev --open",
     "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^3.2.2"
+    "@astrojs/solid-js": "^3.0.1",
+    "astro": "^3.2.2",
+    "solid-js": "^1.7.12"
   }
 }
