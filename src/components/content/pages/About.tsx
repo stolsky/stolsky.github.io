@@ -2,7 +2,7 @@ import "./about.css"
 export default () => {
     return (
         <div class="About">
-            <div class="Portrait" style="background-image: url(/images/portrait2.jpg" />
+            <div class="Portrait" style="background-image: url(./images/portrait2.jpg" />
             <div>
                 <h1 class="MainTitle">Hi, I am <span class="Name">stolsky</span></h1>
                 <p>a<span class="Highlight"> Full Stack Web Developer </span>from Germany</p>

@@ -69,7 +69,7 @@
 
     }
 
-    p {
+    :is(p) {
         font-size: 1.5rem;
         padding-block: 0.5rem;
         margin: 0;
