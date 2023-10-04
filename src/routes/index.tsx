@@ -7,15 +7,11 @@ import structure from "~/components/Content/structure"
 
 export default component$(() => {
     const structure_items = Object.values(structure)
-    return (
-        <div class="Container">
-            <Content items={structure_items} />
-        </div>
-    )
+    return <Content items={structure_items} />
 })
 
 export const head: DocumentHead = {
-  title: "stolsky.dev",
+  title: "Stolsky - Portfolio",
   meta: [
     {
       name: "description",

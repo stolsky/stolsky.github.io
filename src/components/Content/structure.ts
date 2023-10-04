@@ -3,22 +3,22 @@ interface Zone {
     class: string,
 }
 
-const ZoneCollection: { [key: string]: Zone } = {
-    TopLeft: {
+const ZoneCollection = {
+    Top: {
         index: 0,
-        class: "TopLeft",
+        class: "Top",
     },
-    TopRight: {
+    Right: {
         index: 1,
-        class: "TopRight"
+        class: "Right"
     },
-    BottomRight: {
+    Bottom: {
         index: 2,
-        class: "BottomRight"
+        class: "Bottom"
     },
-    BottomLeft: {
+    Left: {
         index: 3,
-        class: "BottomLeft"
+        class: "Left"
     }
 } as const
 // type Zones = (typeof ZoneCollection)[keyof typeof ZoneCollection]
@@ -39,40 +39,40 @@ const structure: readonly StructureItem[] = [
         id: 0,
         label: "about",
         color: {
-            light: "#fdffb6",
-            dark: "#767848"
+            light: "hsl(62, 100%, 86%)",
+            dark: "hsl(62, 25%, 38%)"
         },
-        zone: ZoneCollection.TopLeft
+        zone: ZoneCollection.Top
     },
 
     {
         id: 1,
         label: "skills",
         color: {
-            light: "#caffbf",
-            dark: "#567a4f"
+            light: "hsl(110, 100%, 87%)",
+            dark: "hsl(110, 21%, 39%)"
         },
-        zone: ZoneCollection.TopRight
+        zone: ZoneCollection.Right
     },
     
     {
         id: 2,
         label: "contact",
         color: {
-            light: "#9bf6ff",
-            dark: "#3d757b"
+            light: "hsl(185, 100%, 80%)",
+            dark: "hsl(186, 34%, 36%)"
         },
-        zone: ZoneCollection.BottomRight
+        zone: ZoneCollection.Bottom
     },
 
     {
         id: 3,
         label: "projects",
         color: {
-            light: "#FFADAD",
-            dark: "#824e4f"
+            light: "hsl(0, 100%, 84%)",
+            dark: "hsl(359, 25%, 41%)"
         },
-        zone: ZoneCollection.BottomLeft
+        zone: ZoneCollection.Left
     }
     
  ] as const
