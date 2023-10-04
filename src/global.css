@@ -17,4 +17,6 @@ body {
     font-size: 100%;
     font-family: Aileron, sans-serif;
     overflow: hidden;
+
+    --main-background-color: hsl(198, 100%, 9%);
 }

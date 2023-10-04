@@ -39,8 +39,8 @@ const structure: readonly StructureItem[] = [
         id: 0,
         label: "about",
         color: {
-            light: "#fdffb6",
-            dark: "#767848"
+            light: "hsl(62, 100%, 86%)",
+            dark: "hsl(62, 25%, 38%)"
         },
         zone: ZoneCollection.Top
     },
@@ -49,8 +49,8 @@ const structure: readonly StructureItem[] = [
         id: 1,
         label: "skills",
         color: {
-            light: "#caffbf",
-            dark: "#567a4f"
+            light: "hsl(110, 100%, 87%)",
+            dark: "hsl(110, 21%, 39%)"
         },
         zone: ZoneCollection.Right
     },
@@ -59,8 +59,8 @@ const structure: readonly StructureItem[] = [
         id: 2,
         label: "contact",
         color: {
-            light: "#9bf6ff",
-            dark: "#3d757b"
+            light: "hsl(185, 100%, 80%)",
+            dark: "hsl(186, 34%, 36%)"
         },
         zone: ZoneCollection.Bottom
     },
@@ -69,8 +69,8 @@ const structure: readonly StructureItem[] = [
         id: 3,
         label: "projects",
         color: {
-            light: "#FFADAD",
-            dark: "#824e4f"
+            light: "hsl(0, 100%, 84%)",
+            dark: "hsl(359, 25%, 41%)"
         },
         zone: ZoneCollection.Left
     }

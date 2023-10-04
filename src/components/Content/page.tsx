@@ -18,6 +18,7 @@ export default component$<PageProps>((props) => {
         <p
             class={`Title ${props.zone.class}${is_active ? " Active" : ""}`}
             style={`color:${props.color.light};`}
+            // tabIndex={props.zone.index}
             onPointerUp$={() => {
                 const activation = [false, false, false, false]
                 activation[props.zone.index] = true
@@ -29,7 +30,7 @@ export default component$<PageProps>((props) => {
         </p>
         <div
             class={`Page ${props.zone.class}${is_active ? " Active" : ""}`}
-            style={`color:${props.color.dark}; background-color:${props.color.light}`}
+            style={`color:${props.color.dark}; background-color:${props.color.light}; outline-color:${props.color.light}`}
         >
             <Slot />
         </div>

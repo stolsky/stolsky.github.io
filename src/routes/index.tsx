@@ -11,7 +11,7 @@ export default component$(() => {
 })
 
 export const head: DocumentHead = {
-  title: "stolsky.dev",
+  title: "Stolsky - Portfolio",
   meta: [
     {
       name: "description",
