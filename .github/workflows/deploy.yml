@@ -1,12 +1,14 @@
 name: Deploy to GitHub Pages
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches:
-    - master
+  push:
+    branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
 
