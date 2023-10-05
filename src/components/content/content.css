@@ -15,7 +15,7 @@ main {
     min-width: 480px;
     min-height: 640px;
 
-    .Title {
+    .Link {
         position: absolute;
         margin: 0;
         display: flex;
@@ -93,17 +93,26 @@ main {
     
     .Page {
         --page-padding: 2rem;
-        border-radius: 25px;
-        overflow: hidden;
         grid-area: center;
+        position: absolute;
         width: calc(100% - var(--page-padding) * 2);
         height: calc(100% - var(--page-padding) * 2);
         padding: var(--page-padding);
-        position: absolute;
+        border-radius: 25px;
         opacity: 0;
+        overflow: hidden;
         transition: translate 0.5s, opacity 0.5s;
-        outline: 0.2rem solid transparent;
-        outline-offset: 0.4rem;
+        outline: 0.25rem solid var(--main-background-color);
+        outline-offset: -0.75rem;
+        color: var(--dark-color);
+        background-image: linear-gradient(
+            to bottom,
+            color-mix(in oklab, var(--light-color) 70%, black),
+            10%,
+            var(--light-color),
+            90%,
+            color-mix(in oklab, var(--light-color) 70%, white)
+        );
         
         &.Top {
             translate: 0 -100%;

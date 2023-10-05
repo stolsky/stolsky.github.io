@@ -1,6 +1,6 @@
 import type { JSXElement } from 'solid-js'
 import { type Zone } from './structure'
-import { useActivePageContext } from './ActivePage'
+import { use_active_page_context } from './ActivePageContext'
 
 interface PageProps {
     children: JSXElement
@@ -14,20 +14,20 @@ interface PageProps {
 }
 
 export default (props: PageProps) => {
-    const { activePage, setActivePage } = useActivePageContext()
+    const { active_page, set_active_page } = use_active_page_context()
     return (
         <>
             <p
-                class={`Title ${props.zone.class}${activePage() === props.zone.index ? " Active" : ""}`}
+                class={`Link ${props.zone.class}${active_page() === props.zone.index ? " Active" : ""}`}
                 style={`color:${props.color.light};`}
-                onPointerUp={() => { setActivePage(props.zone.index); console.log(activePage() === props.zone.index, activePage, props.zone.index) }}
+                onPointerUp={() => set_active_page(props.zone.index)}
             >
                 <span class="Icon icon-ctrl" />
                 <span class="Label">{props.label}</span>
             </p>
             <div
-                class={`Page ${props.zone.class}${activePage() === props.zone.index ? " Active" : ""}`}
-                style={`color:${props.color.dark}; background-color:${props.color.light}; outline-color:${props.color.light}`}
+                class={`Page ${props.zone.class}${active_page() === props.zone.index ? " Active" : ""}`}
+                style={`--dark-color:${props.color.dark}; --light-color:${props.color.light};`}
             >
                 {props.children}
             </div>

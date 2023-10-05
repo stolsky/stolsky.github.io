@@ -1,5 +1,5 @@
 import { type StructureItem } from './structure'
-import { ActivePageProvider } from './ActivePage'
+import { ActivePageProvider } from './ActivePageContext'
 import Page from "./Page"
 import About from './pages/About'
 
@@ -15,12 +15,12 @@ export default (props: { items: StructureItem[] }) => {
         <main>
             <ActivePageProvider init_page={0}>
                 <For each={items}>{
-                    ({zone, label, color}) => <Page zone={zone} label={label} color={color}>
+                    ({id, zone, label, color}) => <Page zone={zone} label={label} color={color}>
                         <Switch>
-                            <Match when={zone.index === 0}><About /></Match>
-                            <Match when={zone.index === 1}><Skills /></Match>
-                            <Match when={zone.index === 2}><Projects /></Match>
-                            <Match when={zone.index === 3}><Contact /></Match>
+                            <Match when={zone.index === 0}><About id={id} /></Match>
+                            <Match when={zone.index === 1}><Skills id={id} /></Match>
+                            <Match when={zone.index === 2}><Projects id={id} /></Match>
+                            <Match when={zone.index === 3}><Contact id={id} /></Match>
                         </Switch>
                     </Page>
                 }</For>
