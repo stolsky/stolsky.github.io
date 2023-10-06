@@ -19,8 +19,8 @@ export default (props: { items: StructureItem[] }) => {
                         <Switch>
                             <Match when={zone.index === 0}><About id={id} /></Match>
                             <Match when={zone.index === 1}><Skills id={id} /></Match>
-                            <Match when={zone.index === 2}><Projects id={id} /></Match>
-                            <Match when={zone.index === 3}><Contact id={id} /></Match>
+                            <Match when={zone.index === 2}><Contact id={id} /></Match>
+                            <Match when={zone.index === 3}><Projects id={id} /></Match>
                         </Switch>
                     </Page>
                 }</For>

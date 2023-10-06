@@ -29,8 +29,15 @@ export default (props: { id: number }) => {
     
     return (
         <div class="About">
-            <div class="Portrait">
-                <div class="Inner" style="background-image: url(./images/portrait2.jpg" />
+            <div>
+                <div class="Portrait">
+                    <div class="Inner" style="background-image: url(./images/portrait2.jpg" />
+                </div>
+                <div class="SocialMediaLinks">
+                    <a href=""><span class="Icon icon-mail4"></span></a>
+                    <a href=""><span class="Icon icon-github"></span></a>
+                    <a href=""><span class="Icon icon-youtube"></span></a>
+                </div>
             </div>
             <div>
                 <h1 class="Title">Hi, I am <span class="Name">stolsky</span></h1>
@@ -38,17 +45,12 @@ export default (props: { id: number }) => {
                 <h2 class="Header">
                     I relish exploring
                     <span class="Highlight"> new languages </span>
-                    and their<div class="Carousel">
+                    and their<p class="Carousel">
                         <For each={carousel_items}>
-                            {({ id, label}) => <div class={set_class_by_state(id)}>{label}</div>}
+                            {({ id, label}) => <span class={set_class_by_state(id)}>{label}</span>}
                         </For>
-                    </div>
+                    </p>
                 </h2>
-                <ul class="SocialMediaLinks">
-                    <li class="Icon icon-mail4"></li>
-                    <li class="Icon icon-github"></li>
-                    <li class="Icon icon-youtube"></li>
-                </ul>
             </div>
         </div>
     )

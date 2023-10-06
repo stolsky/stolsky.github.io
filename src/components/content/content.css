@@ -18,14 +18,16 @@ main {
     .Link {
         position: absolute;
         margin: 0;
+        padding: 0.2rem;
+        justify-self: center;
+        align-self: center;
         display: flex;
-        cursor: pointer;
         flex-flow: column;
         align-items: center;
-        padding: 0.2rem;
+        cursor: pointer;
         opacity: 1;
-        transition: opacity 1.5s;
         z-index: 1;
+        transition: opacity 1.5s;
     
         &.Active {
             opacity: 0;
@@ -39,28 +41,22 @@ main {
     
         &.Top {
             --translate-x: 0;
-            --translate-y: -0.4rem;
+            --translate-y: -0.5rem;
             grid-area: top-center;
-            justify-self: center;
         }
     
         &.Right {
-            --translate-x: 0.4rem;
+            --translate-x: 0.5rem;
             --translate-y: 0;
             grid-area: center-right;
-            align-self: center;
             rotate: 90deg;
-            justify-self: flex-end;
-            right: -0.4rem;
         }
     
         &.Bottom {
             --translate-x: 0;
-            --translate-y: 0.4rem;
+            --translate-y: 0.5rem;
             grid-area: bottom-center;
-            justify-self: center;
             rotate: 180deg;
-            align-self: flex-end;
     
             .Label {
                 rotate: -180deg;
@@ -68,12 +64,10 @@ main {
         }
     
         &.Left {
-            --translate-x: -0.4rem;
+            --translate-x: -0.5rem;
             --translate-y: 0;
             grid-area: center-left;
-            align-self: center;
             rotate: -90deg;
-            left: -1.4rem;
         }
         
         .Label {
@@ -91,6 +85,7 @@ main {
         }
     }
     
+    /* https://css-generators.com/custom-corners/ */
     .Page {
         --page-padding: 2rem;
         grid-area: center;
@@ -105,13 +100,14 @@ main {
         outline: 0.25rem solid var(--main-background-color);
         outline-offset: -0.75rem;
         color: var(--dark-color);
+        background-color: var(--light-color);
         background-image: linear-gradient(
             to bottom,
-            color-mix(in oklab, var(--light-color) 70%, black),
-            10%,
+            color-mix(in oklab, var(--light-color) 95, black),
+            5%,
             var(--light-color),
             90%,
-            color-mix(in oklab, var(--light-color) 70%, white)
+            color-mix(in oklab, var(--light-color) 80%, white)
         );
         
         &.Top {
