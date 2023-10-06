@@ -39,24 +39,24 @@ main {
     
         &.Top {
             --translate-x: 0;
-            --translate-y: -0.5rem;
+            --translate-y: -0.4rem;
             grid-area: top-center;
             justify-self: center;
         }
     
         &.Right {
-            --translate-x: 0.5rem;
+            --translate-x: 0.4rem;
             --translate-y: 0;
             grid-area: center-right;
             align-self: center;
             rotate: 90deg;
             justify-self: flex-end;
-            right: -0.2rem;
+            right: -0.4rem;
         }
     
         &.Bottom {
             --translate-x: 0;
-            --translate-y: 0.5rem;
+            --translate-y: 0.4rem;
             grid-area: bottom-center;
             justify-self: center;
             rotate: 180deg;
@@ -68,12 +68,12 @@ main {
         }
     
         &.Left {
-            --translate-x: -0.5rem;
+            --translate-x: -0.4rem;
             --translate-y: 0;
             grid-area: center-left;
             align-self: center;
             rotate: -90deg;
-            left: -1rem;
+            left: -1.4rem;
         }
         
         .Label {

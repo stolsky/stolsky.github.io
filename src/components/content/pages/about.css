@@ -18,6 +18,7 @@
         border-radius: 50%;
         outline: 0.4rem solid var(--main-background-color);
         outline-offset: 0.4rem;
+        border: 0.2rem solid var(--main-background-color);
         
         .Inner {
             width: 100%;
@@ -130,9 +131,9 @@
 }
 
 @keyframes wobble-in {
-    0% { translate: 0 2.5rem; }
-    40% { translate: 0 -.5rem; }
-    80% { translate: 0 .5rem; }
+    0% { translate: 0 -2.5rem; }
+    40% { translate: 0 .5rem; }
+    75% { translate: 0 -.5rem; }
     100% { translate: 0 0; }
 }
 
@@ -141,7 +142,7 @@
         translate: 0 0;
     }
     to {
-        translate: 0 -2.5rem;
+        translate: 0 2.5rem;
     }
 }
 
