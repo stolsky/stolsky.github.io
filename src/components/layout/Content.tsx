@@ -1,13 +1,15 @@
-import { type StructureItem } from './structure'
-import { ActivePageProvider } from './ActivePageContext'
+import { For, Match, Switch } from 'solid-js'
+
+import { type StructureItem } from "./structure"
+import { ActivePageProvider } from "./ActivePageContext"
 import Page from "./Page"
-import About from './pages/About'
 
 import "./content.css"
-import Skills from './pages/Skills'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
-import { For, Match, Switch } from 'solid-js'
+
+import About from "../content/About"
+import Skills from "../content/Skills"
+import Projects from "../content/Projects/Projects"
+import Contact from "../content/Contact"
 
 export default (props: { items: StructureItem[] }) => {
     const { items } = props

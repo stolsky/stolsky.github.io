@@ -1,3 +1,12 @@
+:root {
+    --intro-length: 1.0s;
+}
+
+body {
+    background-color: var(--main-background-color);
+    height: 100dvh;
+}
+
 main {
     position: absolute;
     left: 0;
@@ -11,9 +20,9 @@ main {
         "bottom-left bottom-center bottom-right";
     grid-template-columns: minmax(5%, 3.8rem) 1fr minmax(5%, 3.8rem);
     grid-template-rows: minmax(8%, 3.4rem) 1fr minmax(8%, 3.4rem);
-    background-color: var(--main-background-color);
     min-width: 480px;
     min-height: 640px;
+    animation: intro var(--intro-length) ease-in-out;
 
     .Link {
         position: absolute;
@@ -94,9 +103,8 @@ main {
         height: calc(100% - var(--page-padding) * 2);
         padding: var(--page-padding);
         border-radius: 25px;
-        opacity: 0;
         overflow: hidden;
-        transition: translate 0.5s, opacity 0.5s;
+        transition: translate 0.5s;
         outline: 0.25rem solid var(--main-background-color);
         outline-offset: -0.75rem;
         color: var(--dark-color);
@@ -111,27 +119,39 @@ main {
         );
         
         &.Top {
-            translate: 0 -100%;
+            translate: 0 -120%;
         }
         
         &.Right {
-            translate: 100% 0;
+            translate: 110% 0;
         }
         
         &.Bottom {
-            translate: 0 100%;
+            translate: 0 120%;
         }
         
         &.Left {
-            translate: -100% 0;
+            translate: -110% 0;
         }
     
         &.Active {
-            opacity: 1;
             translate: 0 0;
         }
     }
     
+}
+
+@keyframes intro {
+    0% {
+        translate: -5% -5%;
+        rotate: -20deg;
+        scale: 0.3;
+    }
+    100% {
+        translate: 0% 0%;
+        rotate: 0deg;
+        scale: 1;
+    }
 }
 
 @keyframes bounce {

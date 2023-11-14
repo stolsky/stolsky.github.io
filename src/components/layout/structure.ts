@@ -1,9 +1,9 @@
-interface Zone {
+interface ZoneType {
     index: number,
     class: string,
 }
 
-const ZoneCollection = {
+const Zone = {
     Top: {
         index: 0,
         class: "Top",
@@ -30,11 +30,10 @@ interface StructureItem {
         light: string,
         dark: string
     },
-    readonly zone: Zone
+    readonly zone: ZoneType
 }
 
 const structure: readonly StructureItem[] = [
-
     {
         id: 0,
         label: "about",
@@ -42,9 +41,8 @@ const structure: readonly StructureItem[] = [
             light: "hsl(62, 100%, 86%)",
             dark: "hsl(62, 25%, 38%)"
         },
-        zone: ZoneCollection.Top
+        zone: Zone.Top
     },
-
     {
         id: 1,
         label: "skills",
@@ -52,9 +50,8 @@ const structure: readonly StructureItem[] = [
             light: "hsl(110, 100%, 87%)",
             dark: "hsl(110, 21%, 39%)"
         },
-        zone: ZoneCollection.Right
+        zone: Zone.Right
     },
-    
     {
         id: 2,
         label: "contact",
@@ -62,9 +59,8 @@ const structure: readonly StructureItem[] = [
             light: "hsl(185, 100%, 80%)",
             dark: "hsl(186, 34%, 36%)"
         },
-        zone: ZoneCollection.Bottom
+        zone: Zone.Bottom
     },
-
     {
         id: 3,
         label: "projects",
@@ -72,13 +68,13 @@ const structure: readonly StructureItem[] = [
             light: "hsl(0, 100%, 84%)",
             dark: "hsl(359, 25%, 41%)"
         },
-        zone: ZoneCollection.Left
+        zone: Zone.Left
     }
-    
  ] as const
 
 export default structure
 export {
+    Zone,
     type StructureItem,
-    type Zone
+    type ZoneType
 }

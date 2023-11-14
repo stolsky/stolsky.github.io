@@ -1,6 +1,9 @@
 import { For, createEffect, createSignal } from "solid-js"
+
+import { Zone } from "../layout/structure"
+import { use_active_page_context } from "../layout/ActivePageContext"
+
 import "./about.css"
-import { use_active_page_context } from "../ActivePageContext"
 
 export default (props: { id: number }) => {
     const carousel_items = [
@@ -12,10 +15,9 @@ export default (props: { id: number }) => {
     const [carousel_state, set_cariousel_state] = createSignal(0)
     const set_class_by_state = (state: number) => `Highlight ${carousel_state() === state ? "Active" : "Inactive"}`
     
-    const { active_page } = use_active_page_context()
+    const { active_page, set_active_page } = use_active_page_context()
     let timer = 0
     createEffect(() => {
-        console.log("create effect", timer)
         if (active_page() === props.id) {
             timer = setInterval(
                 () => set_cariousel_state((carousel_state() + 1) % carousel_items.length),
@@ -25,7 +27,6 @@ export default (props: { id: number }) => {
             clearInterval(timer)
         }
     })
-    
     
     return (
         <div class="About">
@@ -51,6 +52,7 @@ export default (props: { id: number }) => {
                         </For>
                     </p>
                 </h2>
+                <button class="CallToAction" onClick={() => set_active_page(Zone.Left.index) }>Explore</button>
             </div>
         </div>
     )

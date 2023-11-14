@@ -1,11 +1,11 @@
 import type { JSXElement } from 'solid-js'
-import { type Zone } from './structure'
+import { type ZoneType } from './structure'
 import { use_active_page_context } from './ActivePageContext'
 
-interface PageProps {
+interface Props {
     children: JSXElement
 
-    zone: Zone
+    zone: ZoneType
     label: string
     color: {
         light: string,
@@ -13,7 +13,7 @@ interface PageProps {
     }
 }
 
-export default (props: PageProps) => {
+export default (props: Props) => {
     const { active_page, set_active_page } = use_active_page_context()
     return (
         <>
