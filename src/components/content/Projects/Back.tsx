@@ -11,11 +11,12 @@ export default (props: Props) => {
     return (
         <div class="Face Back">
             <p class="Info">{info}</p>
-            <p class="Links">
+            <div class="Links">
                 <For each={links}>
-                    {(link) => <a href={link.url} target="Link"><span class={`Icon icon-${link.icon}`} /><span>{link.phrase}</span></a>}
+                    {(link) => <a href={link.url} target="Link"><span class={`Icon icon-${link.icon}`} /><span>{link.text}</span></a>}
                 </For>
-            </p>
+            </div>
+
         </div>
     )
 }

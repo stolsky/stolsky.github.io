@@ -17,7 +17,7 @@
         .Card {
             perspective: 1000px;
             
-            &:hover .Content {
+            &.Rotated .Content {
                 rotate: x 0.5turn;
             }
             
@@ -27,7 +27,6 @@
                 height: 250px;
                 transition: rotate 1s;
                 transform-style: preserve-3d;
-
 
                 .Face {
                     position: absolute;
@@ -40,48 +39,57 @@
                     :is(p) {
                         margin: 0;
                     }
+
+                    &.Front,
+                    &.Back {
+                        overflow: hidden;
+                        background-color: #ffffff;
+                    }
                     
                     &.Front {
-                        background-color: #ffffff;
 
-                        .Title {
+                        .Title,
+                        .Tools {
                             position: absolute;
-                            left: 5%;
-                            top: 10%;
+                            background-color: rgb(255 255 255 / 0.8);
+                            backdrop-filter: blur(2px);
+                        }
+                        
+                        .Title { 
+                            left: 2rem;
+                            top: 2rem;
+                            
                             padding: 0.5rem 1rem;
+                            border-radius: 0.5rem;
+                            outline: 4px solid;
+
                             font-family: AnekLatin, sans-serif;
                             text-align: center;
-                            background-color: rgba(255, 255, 255, 0.8);
-                            backdrop-filter: blur(2px);
-                            border-radius: 0.5rem;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
                             
                             .Name {
                                 font-size: 1.2rem;
                             }
                         }
-                        .Background {
+                        
+                        :is(video) {
                             position: absolute;
                             left: 0;
                             top: 0;
                             width: 100%;
                             height: 100%;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: cover;
-                            border-radius: inherit;
                         }
+
                         .Tools {
-                            position: absolute;
                             right: 1rem;
                             bottom: 1rem;
+
+                            padding: 0.25rem 0.5rem;
+                            border-radius: 0.25rem;
+                            outline: 2px solid;
+
                             display: flex;
                             gap: 0.5rem;
-                            padding: 0.25rem 0.5rem;
-                            border-radius: 0.5rem;
-                            background-color: #ffffff;
-                            box-shadow: 0 2px 4px rgb(0 0 0 / 0.5);
-
+                            
                             :is(img) {
                                 width: 25px;
                                 height: 25px;
@@ -91,13 +99,13 @@
                     }
             
                     &.Back {
-                        background-color: #ffffff;
                         rotate: x 0.5turn;
                         padding: 1rem 2rem;
 
                         .Info {
                             text-align: justify;
                         }
+
                         .Links {
                             padding-block: 1rem;
                             display: grid;

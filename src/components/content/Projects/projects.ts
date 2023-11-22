@@ -6,29 +6,44 @@ const projects: Project[] = [
         image: "",
         info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consectetur efficitur. Pellentesque vel ipsum lorem. Aliquam at pulvinar arcu. Mauris vestibulum vulputate tempus. Curabitur augue odio, placerat at pretium eu, maximus sed arcu.",
         type: ProjectType.simulation,
-        tools: [Tools.typescript, Tools.vitejs],
+        tools: {
+            runtime: Tools.nodejs,
+            language: Tools.typescript,
+            frameworks: [Tools.vitejs]
+        },
         links: [
-            { phrase: "view source code", icon: "github", url: "https://github.com/stolsky/generate-and-solve-mazes" }
+            { text: "source code", icon: "github", url: "https://github.com/stolsky/generate-and-solve-mazes" }
         ]
     },
     {
         name: "Popular Baby Names",
         image: "/images/screenshots/popular-baby-names.png",
+        video: "/videos/popular-baby-names.webm",
         info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consectetur efficitur. Pellentesque vel ipsum lorem. Aliquam at pulvinar arcu. Mauris vestibulum vulputate tempus. Curabitur augue odio, placerat at pretium eu, maximus sed arcu.",
         type: ProjectType.data_visualization,
-        tools: [Tools.typescript, Tools.vitejs, Tools.d3js],
+        tools: {
+            runtime: Tools.nodejs,
+            language: Tools.typescript,
+            frameworks: [Tools.vitejs],
+            libraries: [Tools.d3js]
+        },
         links: [
-            { phrase: "view source code", icon: "github", url: "https://github.com/stolsky/popular-baby-names" }
+            { text: "source code", icon: "github", url: "https://github.com/stolsky/popular-baby-names" },
+            { text: "live demo", icon: "link", url: "https://www.stolsky.de/popular-baby-names/" }
         ]
     },
     {
         name: "Portfolio",
-        image: "",
+        image: "/images/screenshots/portfolio.png",
         info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consectetur efficitur. Pellentesque vel ipsum lorem. Aliquam at pulvinar arcu. Mauris vestibulum vulputate tempus. Curabitur augue odio, placerat at pretium eu, maximus sed arcu.",
         type: ProjectType.web_design,
-        tools: [Tools.typescript, Tools.astro, Tools.solidjs],
+        tools: {
+            runtime: Tools.nodejs,
+            language: Tools.typescript,
+            frameworks: [Tools.astro, Tools.solidjs]
+        },
         links: [
-            { phrase: "view source code", icon: "github", url: "https://github.com/stolsky/stolsky.github.io" }
+            { text: "source code", icon: "github", url: "https://github.com/stolsky/stolsky.github.io" }
         ]
     },
     {
@@ -36,9 +51,12 @@ const projects: Project[] = [
         image: "",
         info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consectetur efficitur. Pellentesque vel ipsum lorem. Aliquam at pulvinar arcu. Mauris vestibulum vulputate tempus. Curabitur augue odio, placerat at pretium eu, maximus sed arcu.",
         type: ProjectType.simulation,
-        tools: [Tools.javascript],
+        tools: {
+            runtime: Tools.nodejs,
+            language: Tools.javascript
+        },
         links: [
-            { phrase: "view source code", icon: "github", url: "https://github.com/stolsky/ALoAA" }
+            { text: "source code", icon: "github", url: "https://github.com/stolsky/ALoAA" }
         ]
     },
     {
@@ -46,9 +64,12 @@ const projects: Project[] = [
         image: "",
         info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consectetur efficitur. Pellentesque vel ipsum lorem. Aliquam at pulvinar arcu. Mauris vestibulum vulputate tempus. Curabitur augue odio, placerat at pretium eu, maximus sed arcu.",
         type: ProjectType.data_visualization,
-        tools: [Tools.javascript, Tools.d3js],
+        tools: {
+            language: Tools.javascript,
+            libraries: [Tools.d3js]
+        },
         links: [
-            { phrase: "view source code", icon: "github", url: "https://github.com/stolsky/election-results-map" }
+            { text: "source code", icon: "github", url: "https://github.com/stolsky/election-results-map" }
         ]
     },
     {
@@ -56,9 +77,11 @@ const projects: Project[] = [
         image: "",
         info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consectetur efficitur. Pellentesque vel ipsum lorem. Aliquam at pulvinar arcu. Mauris vestibulum vulputate tempus. Curabitur augue odio, placerat at pretium eu, maximus sed arcu.",
         type: ProjectType.game_design,
-        tools: [Tools.javascript],
+        tools: {
+            language: Tools.javascript
+        },
         links: [
-            { phrase: "view source code", icon: "github", url: "https://github.com/stolsky/the-smoking-mirror" }
+            { text: "source code", icon: "github", url: "https://github.com/stolsky/the-smoking-mirror" }
         ]
     }
 ]

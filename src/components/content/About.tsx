@@ -35,24 +35,22 @@ export default (props: { id: number }) => {
                     <div class="Inner" style="background-image: url(./images/portrait2.jpg" />
                 </div>
                 <div class="SocialMediaLinks">
-                    <a href=""><span class="Icon icon-mail4"></span></a>
-                    <a href=""><span class="Icon icon-github"></span></a>
-                    <a href=""><span class="Icon icon-youtube"></span></a>
+                    <a href=""><span class="Icon icon-mail4" /></a>
+                    <a href=""><span class="Icon icon-github" /></a>
+                    <a href=""><span class="Icon icon-youtube" /></a>
                 </div>
             </div>
             <div>
                 <h1 class="Title">Hi, I am <span class="Name">stolsky</span></h1>
-                <h2 class="Header">a<span class="Highlight"> Full Stack Web Developer </span>from Germany</h2>
+                <h2 class="Header">a<span class="Highlight"> Full <span class="Icon icon-stack" style={{ "font-size": "3rem", "vertical-align": "text-bottom" }} /> Developer </span>from Germany</h2>
                 <h2 class="Header">
-                    I relish exploring
-                    <span class="Highlight"> new languages </span>
-                    and their<p class="Carousel">
+                    I relish exploring<span class="Highlight"> new languages </span>and their<p class="Carousel">
                         <For each={carousel_items}>
                             {({ id, label}) => <span class={set_class_by_state(id)}>{label}</span>}
                         </For>
                     </p>
                 </h2>
-                <button class="CallToAction" onClick={() => set_active_page(Zone.Left.index) }>Explore</button>
+                <button class="CallToAction" onPointerUp={() => set_active_page(Zone.Left.index) }>Explore</button>
             </div>
         </div>
     )
