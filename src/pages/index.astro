@@ -1,11 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import structure from "../components/layout/structure"
-import Content from "../components/layout/Content";
 
-const structure_items = Object.values(structure)
+import Title from "../components/Title/Title"
+import Contact from "../components/Contact/Contact"
+
+import Projects from "../components/Projects/Projects"
+import Controls from "../components/Controls/Controls"
+
+import Copyright from "../components/Copyright/Copyright"
 ---
 
 <Layout>
-  <Content items={structure_items} client:load />
+
+    <header>
+        <Title />
+        <Contact />
+    </header>
+    
+    <main>
+        <Projects client:load />
+        <Controls />
+    </main>
+
+    <footer>
+        <Copyright />
+    </footer>
+  
 </Layout>

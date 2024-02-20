@@ -1,0 +1,170 @@
+.Projects {
+
+    display: grid;
+    justify-content: center;
+    grid-gap: 5rem;
+
+    & > :nth-child(2n) {
+        left: 5%;
+    }
+
+    & > :nth-child(2n+1) {
+        left: -5%;
+    }
+
+    .Project {
+        --title-size: 2.5rem;
+        --subtitle-size: 1.5rem;
+
+        --padding-block: 1.5rem;
+        --padding-inline: 1rem;
+
+        position: relative;
+        display: grid;
+        gap: .2rem 0;
+        border-radius: 1rem;
+        
+        background-color: hsl(0 0% 0%);
+        outline: 0.4rem solid hsl(0 0% 0%);
+
+        :is(header),
+        /* .Content, */
+        .Tools {
+            border-radius: 0.2rem;
+            background-color: hsl(0 0% 100%);
+        }
+
+        :is(header) {
+            padding: var(--padding-block) calc(var(--padding-inline) * 2);
+            
+            .Title, .Subtitle {
+                margin: 0;
+                font-family: "AnekLatin", sans-serif;
+                font-size: var(--font-size);
+                word-spacing: calc(var(--font-size) / 5);
+            }
+
+            .Title {
+                /* TODO add different color -> color scheme */
+                --font-size: var(--title-size)
+            }
+
+            .Subtitle {
+                /* TODO add different color -> color scheme */
+                --font-size: var(--subtitle-size)
+            }
+        }
+
+        .Button-3D {
+            position: absolute;
+            /* top: var(--padding-inline);
+            right: var(--padding-inline);
+            padding: 0;
+            font-size: 2rem;
+            border: none;
+            background: none; */
+            cursor: pointer;
+        }
+
+        .Content {
+            position: relative;
+            display: grid;
+            place-content: center;
+            overflow: clip;
+            padding-inline: calc(var(--padding-inline) * 2);
+
+            .Information {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: grid;
+
+                .Preview {
+                    display: block;
+                }
+                
+                .Description,
+                .Links {
+                    display: grid;
+                    padding-inline: var(--padding-inline);
+                    font-size: 1.2rem;
+                    transition: translate .5s, background-color .8s;
+                    background-color: hsl(0 0% 100% / 0);
+                }
+    
+                .Description {
+                    place-content: center;
+                    margin: 0;
+                    text-align: justify;
+                    translate: -100%;
+
+                    /* TODO add different background color -> color scheme */
+                    border-bottom: 1px solid lightgray;
+                }
+    
+                .Links {
+                    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+                    justify-items: center;
+                    align-content: space-evenly;
+                    translate: 100%;
+
+                    /* TODO add different background color -> color scheme */
+                    border-top: 1px solid lightgray;
+                    
+                    .Link {
+                        .Icon {
+                            padding-right: calc(var(--padding-inline) / 2);
+                        }
+                    }
+                }
+
+                &.Visible > .Description,
+                &.Visible > .Links {
+                    translate: 0%;
+                    background-color: hsl(0 0% 100% / 1);
+                }
+
+            }
+
+        }
+
+        .Tools {
+            padding: calc(var(--padding-block) / 2);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+
+            .Tool {
+                display: flex;
+                margin: 0;
+                align-items: center;
+                gap: 0.1rem;
+                color: hsl(0 0% 50%);
+
+                .Icon {
+                    width: 1.5rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+@keyframes fade-in {
+    from { scale: 0.8; opacity: 0; }
+    to { scale: 1; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+    /* animation: <name> line<r forwards; */
+    /* animation-timeline: view(); */
+    /* animation-range: entry 10%; / exit */
+
+    /* @keyframes .. { */
+
+    /* } */
+}

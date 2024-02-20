@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2vnom2');
-  src:  url('fonts/icomoon.eot?2vnom2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2vnom2') format('truetype'),
-    url('fonts/icomoon.woff?2vnom2') format('woff'),
-    url('fonts/icomoon.svg?2vnom2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?s0i4b0');
+  src:  url('fonts/icomoon.eot?s0i4b0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?s0i4b0') format('truetype'),
+    url('fonts/icomoon.woff?s0i4b0') format('woff'),
+    url('fonts/icomoon.svg?s0i4b0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,35 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home:before {
-  content: "\e900";
-}
-.icon-film:before {
-  content: "\e913";
-}
-.icon-feed:before {
-  content: "\e91d";
-}
-.icon-stack:before {
-  content: "\e92e";
-}
-.icon-forward:before {
-  content: "\e969";
-}
-.icon-reply:before {
-  content: "\e96a";
-}
 .icon-sphere:before {
   content: "\e9c9";
 }
 .icon-link:before {
   content: "\e9cb";
 }
-.icon-ctrl:before {
-  content: "\ea50";
+.icon-info:before {
+  content: "\ea0c";
 }
-.icon-embed2:before {
-  content: "\ea80";
+.icon-cancel-circle:before {
+  content: "\ea0d";
 }
 .icon-mail4:before {
   content: "\ea86";

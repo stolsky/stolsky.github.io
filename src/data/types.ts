@@ -1,14 +1,23 @@
-const ProjectType = {
-    data_visualization: "Data Visualization",
-    game_design: "Game Design",
-    simulation: "Simulation",
-    web_design: "Web Design"
-} as const;
-
-interface Tool {
+type Tool = {
     readonly name: string,
     readonly icon: string,
     readonly link: string
+}
+
+type ProjectLink = {
+    text: string
+    icon?: string
+    url: string
+}
+
+type Project = {
+    readonly name: string
+    readonly image: string
+    readonly video?: string
+    readonly info: string
+    readonly type: string
+    readonly tools: Tool[]
+    readonly links: ProjectLink[]
 }
 
 // TODO later use icon link via: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg
@@ -60,33 +69,16 @@ const Available_Tools: Record<string, Tool> = {
     }
 } as const
 
-interface ProjectLink {
-    text: string
-    icon?: string
-    url: string
-}
-
-interface ProjectTools {
-    runtime?: Tool
-    language: Tool
-    frameworks?: Tool[]
-    libraries?: Tool[]
-}
-
-interface Project {
-    readonly name: string
-    readonly image: string
-    readonly video?: string
-    readonly info: string
-    readonly type: string
-    readonly tools: ProjectTools
-    readonly links: ProjectLink[]
-}
+const ProjectType = {
+    data_visualization: "Data Visualization",
+    game_design: "Game Design",
+    simulation: "Simulation",
+    web_design: "Web Design"
+} as const;
 
 export {
     type Project,
     type ProjectLink,
-    type ProjectTools,
     type Tool,
     ProjectType,
     Available_Tools as Tools

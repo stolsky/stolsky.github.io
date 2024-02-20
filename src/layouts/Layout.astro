@@ -24,13 +24,61 @@
 		src: url("./fonts/Aileron-Regular.otf") format("opentype");
 	}
 
+	:root {
+		--main-background-color: hsl(205, 100%, 10%);
+		--main-font-color: hsl(0 0% 0%);
+
+		--background-color-first: hsl(205, 100%, 10%);
+		--background-color-second: #000000;
+
+		--font-color-header-1: hsl(120, 25%, 65%);
+		--font-color-header-2: hsl(120, 25%, 65%);
+		--font-color-text: #000000;
+	}
+
 	body {
 		margin: 0;
 		padding: 0;
+
 		font-size: 100%;
 		font-family: Aileron, sans-serif;
-		overflow: hidden;
+		color: var(--main-font-color);
 
-		--main-background-color: hsl(198, 100%, 9%);
+		background-color: none;
+
+		> :is(header),
+		> :is(footer) {
+			color: hsl(120, 25%, 65%);
+			background-color: inherit;
+		}
+
+		> :is(header) {
+			position: sticky;
+			top: 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			z-index: 1;
+			background-image: linear-gradient(to bottom, var(--background-color-first), transparent);
+		}
+
+		> :is(main) {
+			padding-block: 5rem;
+		}
+
+		> :is(footer) {
+			display: flex;
+			justify-content: space-evenly;
+			align-content: center;
+			padding-block: 0.5rem;
+			font-size: 0.8rem;
+		}
+
 	}
+
+	:is(a) {
+		/* TODO add different color -> color scheme */
+		color: var(--main-font-color);
+        text-decoration: none;
+	}
+
 </style>
